@@ -1,5 +1,5 @@
 cmd: python source/train.py --learning-rate {{lr:float:0.0001}} --batch-size {{b:int:64}} --num-of-epochs
-  {{numofepochs:int:1000}} --activation-function {{activationfunction:[relu,tanh]:relu}} --kernel-width
+  {{numofepochs:int:3}} --activation-function {{activationfunction:[relu,tanh]:relu}} --kernel-width
   {{kernelwidth:int:3}} --average-kernels {{averagekernels:int:32}} --num-of-conv-layers
   {{numofconvlayers:int:5}} --kernel-increasing-factor {{kernelincreasingfactor:float:1.2}}
   --maxpool-after-n-layer {{maxpoolafternlayer:int:0}} --dropout-factor-after-conv
@@ -25,6 +25,7 @@ outs:
   cache: true
   metric: true
   persist: false
+
 
 
 
