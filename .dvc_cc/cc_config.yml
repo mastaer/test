@@ -58,7 +58,7 @@ cli:
       type: int?
   outputs: {}
   stdout: stdout.txt
-  stderr: stderr.txt
+  stderr: stdout.txt
 container:
   engine: docker
   settings:
