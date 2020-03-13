@@ -1,0 +1,44 @@
+  - inputs:
+      git_authentication_json:
+        class: File
+        connector:
+          access: {username: '{{github_com_username}}', password: '{{github_com_password}}', email: '{{github_com_email}}'}
+          command: dvc-cc-connector
+      git_path_to_working_repository: "github.com"
+      git_working_repository_owner: "deep-projects"
+      git_working_repository_name: "dvc-cc-sample-pcam-9.0.git"
+      git_name_of_branch: "cc_0007_test_ACTIVATIONFUNCTIONr"
+      dvc_authentication_json:
+        class: File
+        connector:
+          access: {username: '{{dt1_f4_htw_berlin_de_username}}', password: '{{dt1_f4_htw_berlin_de_password}}'}
+          command: dvc-cc-connector
+      dvc_servername: "dt1.f4.htw-berlin.de"
+      dvc_path_to_working_repository: "/mnt/md0/annusch/github.com/deep-projects/dvc-cc-sample-pcam-9.0.git"
+      dvc_data_dir:
+        class: Directory
+        connector:
+            command: "red-connector-ssh"
+            mount: true
+            access:
+              host: 'dt1.f4.htw-berlin.de'
+              port: 22
+              auth:
+                username: 'annusch'
+                password: '{{dt1_f4_htw_berlin_de_password}}'
+              dirPath: '/mnt/md0/annusch/data_storage'
+      dvc_remote_directory_sshfs:
+        class: Directory
+        connector:
+            command: "red-connector-ssh"
+            mount: true
+            access:
+              host: 'dt1.f4.htw-berlin.de'
+              port: 22
+              auth:
+                username: '{{dt1_f4_htw_berlin_de_username}}'
+                password: '{{dt1_f4_htw_berlin_de_password}}'
+              writable: True
+              dirPath: '/mnt/md0/annusch/github.com/deep-projects/dvc-cc-sample-pcam-9.0.git'
+      dvc_file_to_execute: 'dvc/train.dvc'
+    outputs: {}

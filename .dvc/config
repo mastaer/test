@@ -1,0 +1,5 @@
+[core]
+    remote = dvc_connection
+['remote "dvc_connection"']
+    url = ssh://annusch@dt1.f4.htw-berlin.de:/mnt/md0/annusch/github.com/deep-projects/dvc-cc-sample-pcam-9.0.git
+    ask_password = true
