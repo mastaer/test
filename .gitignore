@@ -141,3 +141,5 @@ tf_model.h5
 
 data
 data
+/tensorboard
+/tf_model.h5
