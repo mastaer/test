@@ -1,0 +1,134 @@
+Computing md5 for a large file 'data/camelyonpatch_level_2_split_train_x.h5'. This is only done once.
+WARNING: DVC-file 'dvc/train.dvc' changed.
+WARNING: Stage 'dvc/train.dvc' changed.
+Running command:
+	python source/train.py --learning-rate 0.0001 --batch-size 64 --num-of-epochs 3 --activation-function relu --kernel-width 3 --average-kernels 32 --num-of-conv-layers 5 --kernel-increasing-factor 1.2 --maxpool-after-n-layer 0 --dropout-factor-after-conv 0.1 --dropout-factor-after-maxp 0.25
+
+2020-03-14 05:59:35.860192: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcuda.so.1
+2020-03-14 05:59:36.131905: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-03-14 05:59:36.132443: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:24:00.0 name: GeForce GTX 1080 Ti computeCapability: 6.1
+coreClock: 1.582GHz coreCount: 28 deviceMemorySize: 10.91GiB deviceMemoryBandwidth: 451.17GiB/s
+2020-03-14 05:59:36.132618: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-03-14 05:59:36.133713: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-03-14 05:59:36.134811: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-03-14 05:59:36.134984: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-03-14 05:59:36.136078: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-03-14 05:59:36.136703: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-03-14 05:59:36.139049: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-03-14 05:59:36.139178: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-03-14 05:59:36.139759: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-03-14 05:59:36.140254: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+Tensorflow runs on the GPU:  [PhysicalDevice(name='/physical_device:GPU:0', device_type='GPU')]
+
+2020-03-14 05:59:36.156612: I tensorflow/core/platform/cpu_feature_guard.cc:143] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2 FMA
+2020-03-14 05:59:36.181073: I tensorflow/core/platform/profile_utils/cpu_utils.cc:102] CPU Frequency: 3599385000 Hz
+2020-03-14 05:59:36.181750: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x7fdedc000b20 initialized for platform Host (this does not guarantee that XLA will be used). Devices:
+2020-03-14 05:59:36.181776: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): Host, Default Version
+2020-03-14 05:59:36.245355: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-03-14 05:59:36.245952: I tensorflow/compiler/xla/service/service.cc:168] XLA service 0x4b6e240 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2020-03-14 05:59:36.245979: I tensorflow/compiler/xla/service/service.cc:176]   StreamExecutor device (0): GeForce GTX 1080 Ti, Compute Capability 6.1
+2020-03-14 05:59:36.246191: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-03-14 05:59:36.247035: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1561] Found device 0 with properties: 
+pciBusID: 0000:24:00.0 name: GeForce GTX 1080 Ti computeCapability: 6.1
+coreClock: 1.582GHz coreCount: 28 deviceMemorySize: 10.91GiB deviceMemoryBandwidth: 451.17GiB/s
+2020-03-14 05:59:36.247077: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-03-14 05:59:36.247097: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-03-14 05:59:36.247113: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcufft.so.10
+2020-03-14 05:59:36.247128: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcurand.so.10
+2020-03-14 05:59:36.247144: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusolver.so.10
+2020-03-14 05:59:36.247158: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcusparse.so.10
+2020-03-14 05:59:36.247174: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-03-14 05:59:36.247265: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-03-14 05:59:36.248160: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-03-14 05:59:36.248972: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1703] Adding visible gpu devices: 0
+2020-03-14 05:59:36.249039: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudart.so.10.1
+2020-03-14 05:59:36.250447: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1102] Device interconnect StreamExecutor with strength 1 edge matrix:
+2020-03-14 05:59:36.250467: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1108]      0 
+2020-03-14 05:59:36.250477: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1121] 0:   N 
+2020-03-14 05:59:36.250615: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-03-14 05:59:36.251525: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:981] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2020-03-14 05:59:36.252381: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1247] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 10368 MB memory) -> physical GPU (device: 0, name: GeForce GTX 1080 Ti, pci bus id: 0000:24:00.0, compute capability: 6.1)
+Model: "sequential"
+_________________________________________________________________
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d (Conv2D)              (None, 86, 86, 20)        560       
+_________________________________________________________________
+activation (Activation)      (None, 86, 86, 20)        0         
+_________________________________________________________________
+dropout (Dropout)            (None, 86, 86, 20)        0         
+_________________________________________________________________
+conv2d_1 (Conv2D)            (None, 86, 86, 24)        4344      
+_________________________________________________________________
+activation_1 (Activation)    (None, 86, 86, 24)        0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 86, 86, 24)        0         
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 86, 86, 29)        6293      
+_________________________________________________________________
+activation_2 (Activation)    (None, 86, 86, 29)        0         
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 86, 86, 29)        0         
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 86, 86, 35)        9170      
+_________________________________________________________________
+activation_3 (Activation)    (None, 86, 86, 35)        0         
+_________________________________________________________________
+dropout_3 (Dropout)          (None, 86, 86, 35)        0         
+_________________________________________________________________
+conv2d_4 (Conv2D)            (None, 86, 86, 42)        13272     
+_________________________________________________________________
+activation_4 (Activation)    (None, 86, 86, 42)        0         
+_________________________________________________________________
+dropout_4 (Dropout)          (None, 86, 86, 42)        0         
+_________________________________________________________________
+global_average_pooling2d (Gl (None, 42)                0         
+_________________________________________________________________
+dropout_5 (Dropout)          (None, 42)                0         
+_________________________________________________________________
+flatten (Flatten)            (None, 42)                0         
+_________________________________________________________________
+dense (Dense)                (None, 2)                 86        
+_________________________________________________________________
+activation_5 (Activation)    (None, 2)                 0         
+=================================================================
+Total params: 33,725
+Trainable params: 33,725
+Non-trainable params: 0
+_________________________________________________________________
+2020-03-14 05:59:36.967563: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session started.
+2020-03-14 05:59:36.967608: I tensorflow/core/profiler/internal/gpu/cupti_tracer.cc:1363] Profiler found 1 GPUs
+2020-03-14 05:59:36.968101: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcupti.so.10.1
+2020-03-14 05:59:37.068436: E tensorflow/core/profiler/internal/gpu/cupti_tracer.cc:1408] function cupti_interface_->Subscribe( &subscriber_, (CUpti_CallbackFunc)ApiCallback, this)failed with error CUPTI_ERROR_INSUFFICIENT_PRIVILEGES
+2020-03-14 05:59:37.068952: E tensorflow/core/profiler/internal/gpu/cupti_tracer.cc:1447] function cupti_interface_->ActivityRegisterCallbacks( AllocCuptiActivityBuffer, FreeCuptiActivityBuffer)failed with error CUPTI_ERROR_INSUFFICIENT_PRIVILEGES
+2020-03-14 05:59:37.069008: E tensorflow/core/profiler/internal/gpu/cupti_tracer.cc:1430] function cupti_interface_->EnableCallback( 0 , subscriber_, CUPTI_CB_DOMAIN_DRIVER_API, cbid)failed with error CUPTI_ERROR_INVALID_PARAMETER
+WARNING:tensorflow:From source/train.py:141: Model.fit_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
+Instructions for updating:
+Please use Model.fit, which supports generators.
+Epoch 1/3
+2020-03-14 05:59:38.047369: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcublas.so.10
+2020-03-14 05:59:38.234038: I tensorflow/stream_executor/platform/default/dso_loader.cc:44] Successfully opened dynamic library libcudnn.so.7
+2020-03-14 05:59:39.417800: I tensorflow/core/profiler/lib/profiler_session.cc:159] Profiler session started.
+2020-03-14 05:59:39.417898: E tensorflow/core/profiler/internal/gpu/cupti_tracer.cc:1408] function cupti_interface_->Subscribe( &subscriber_, (CUpti_CallbackFunc)ApiCallback, this)failed with error CUPTI_ERROR_NOT_INITIALIZED
+2020-03-14 05:59:39.417934: E tensorflow/core/profiler/internal/gpu/cupti_tracer.cc:1447] function cupti_interface_->ActivityRegisterCallbacks( AllocCuptiActivityBuffer, FreeCuptiActivityBuffer)failed with error CUPTI_ERROR_NOT_INITIALIZED
+2020-03-14 05:59:39.646476: E tensorflow/core/profiler/internal/gpu/cupti_tracer.cc:1430] function cupti_interface_->EnableCallback( 0 , subscriber_, CUPTI_CB_DOMAIN_DRIVER_API, cbid)failed with error CUPTI_ERROR_INVALID_PARAMETER
+2020-03-14 05:59:39.646783: I tensorflow/core/profiler/internal/gpu/device_tracer.cc:216]  GpuTracer has collected 0 callback api events and 0 activity events.
+2020-03-14 05:59:39.648267: I tensorflow/core/profiler/rpc/client/save_profile.cc:168] Creating directory: tensorboard/train/plugins/profile/2020_03_14_05_59_39
+2020-03-14 05:59:39.649178: I tensorflow/core/profiler/rpc/client/save_profile.cc:174] Dumped gzipped tool data for trace.json.gz to tensorboard/train/plugins/profile/2020_03_14_05_59_39/a646d3e37e5f.trace.json.gz
+2020-03-14 05:59:39.649606: I tensorflow/core/profiler/utils/event_span.cc:288] Generation of step-events took 0 ms
+
+2020-03-14 05:59:39.650514: I tensorflow/python/profiler/internal/profiler_wrapper.cc:87] Creating directory: tensorboard/train/plugins/profile/2020_03_14_05_59_39Dumped tool data for overview_page.pb to tensorboard/train/plugins/profile/2020_03_14_05_59_39/a646d3e37e5f.overview_page.pb
+Dumped tool data for input_pipeline.pb to tensorboard/train/plugins/profile/2020_03_14_05_59_39/a646d3e37e5f.input_pipeline.pb
+Dumped tool data for tensorflow_stats.pb to tensorboard/train/plugins/profile/2020_03_14_05_59_39/a646d3e37e5f.tensorflow_stats.pb
+Dumped tool data for kernel_stats.pb to tensorboard/train/plugins/profile/2020_03_14_05_59_39/a646d3e37e5f.kernel_stats.pb
+
+30/30 - 9s - loss: 0.6938 - accuracy: 0.4915 - auc: 0.4951 - val_loss: 0.6919 - val_accuracy: 0.6603 - val_auc: 0.6271
+Epoch 2/3
+30/30 - 9s - loss: 0.6919 - accuracy: 0.5238 - auc: 0.5307 - val_loss: 0.6898 - val_accuracy: 0.4968 - val_auc: 0.6198
+Epoch 3/3
+30/30 - 9s - loss: 0.6867 - accuracy: 0.5630 - auc: 0.6003 - val_loss: 0.6780 - val_accuracy: 0.6079 - val_auc: 0.6392
+
+To track the changes with git, run:
+
+	git add outputs/.gitignore dvc/train.dvc
