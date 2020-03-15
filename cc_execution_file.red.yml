@@ -1,0 +1,166 @@
+batches:
+  - inputs:
+      git_authentication_json:
+        class: File
+        connector:
+          access: {username: '{{github_com_username}}', password: '{{github_com_password}}', email: '{{github_com_email}}'}
+          command: dvc-cc-connector
+      git_path_to_working_repository: "github.com"
+      git_working_repository_owner: "mastaer"
+      git_working_repository_name: "test.git"
+      git_name_of_branch: "cc_0024_test_B38"
+      dvc_authentication_json:
+        class: File
+        connector:
+          access: {username: '{{dt1_f4_htw_berlin_de_username}}', password: '{{dt1_f4_htw_berlin_de_password}}'}
+          command: dvc-cc-connector
+      dvc_servername: "dt1.f4.htw-berlin.de"
+      dvc_path_to_working_repository: "/mnt/md0/annusch/github.com/mastaer/test.git"
+      sshfs_input_server_settings:
+        - class: Directory
+          connector:
+              command: "red-connector-ssh"
+              mount: true
+              access:
+                host: 'dt1.f4.htw-berlin.de'
+                port: 22
+                auth:
+                  username: 'annusch'
+                  password: '{{dt1_f4_htw_berlin_de_password}}'
+                dirPath: '/mnt/md0/annusch/data_storage'
+        - class: Directory
+          connector:
+              command: "red-connector-ssh"
+              mount: true
+              access:
+                host: 'dt1.f4.htw-berlin.de'
+                port: 22
+                auth:
+                  username: 'annusch'
+                  password: '{{dt1_f4_htw_berlin_de_password}}'
+                dirPath: '/mnt/md0/annusch/data_storage'
+        - class: Directory
+          connector:
+              command: "red-connector-ssh"
+              mount: true
+              access:
+                host: 'dt1.f4.htw-berlin.de'
+                port: 22
+                auth:
+                  username: 'annusch'
+                  password: '{{dt1_f4_htw_berlin_de_password}}'
+                dirPath: '/mnt/md0/annusch/data_storage'
+        - class: Directory
+          connector:
+              command: "red-connector-ssh"
+              mount: true
+              access:
+                host: 'dt1.f4.htw-berlin.de'
+                port: 22
+                auth:
+                  username: 'annusch'
+                  password: '{{dt1_f4_htw_berlin_de_password}}'
+                dirPath: '/mnt/md0/annusch/data_storage'
+      sshfs_input_dest_rel_paths:
+        - 'data'
+        - 'data2'
+        - 'data3'
+        - 'data4'
+      dvc_remote_directory_sshfs:
+        class: Directory
+        connector:
+            command: "red-connector-ssh"
+            mount: true
+            access:
+              host: 'dt1.f4.htw-berlin.de'
+              port: 22
+              auth:
+                username: '{{dt1_f4_htw_berlin_de_username}}'
+                password: '{{dt1_f4_htw_berlin_de_password}}'
+              writable: True
+              dirPath: '/mnt/md0/annusch/github.com/mastaer/test.git'
+      dvc_file_to_execute: 'dvc/train.dvc'
+    outputs: {}
+cli:
+  baseCommand: [dvc-cc-agent]
+  class: CommandLineTool
+  cwlVersion: v1.0
+  doc: some descriptions of the package...
+  inputs:
+    git_authentication_json:
+      doc: 'A path to json file which contains the git authentication. This should include the keys: username. email and password.'
+      inputBinding: {position: 0}
+      type: File
+    git_path_to_working_repository:
+      doc: 'The git working directory. With this you can specify what the main git root is.'
+      inputBinding: {position: 1}
+      type: string
+    git_working_repository_owner:
+      doc: 'The name of the owner of the git repository which you want to execute.'
+      inputBinding: {position: 2}
+      type: string
+    git_working_repository_name:
+      doc: 'The git repository name.'
+      inputBinding: {position: 3}
+      type: string
+    git_name_of_branch:
+      doc: 'The source code jumps to this here defined git tag (with git checkout) and execute dvc repro there.'
+      inputBinding: {position: 4}
+      type: string
+    dvc_authentication_json:
+      doc: 'A path to json file which contains the dvc authentication. This should include the keys: username and password.'
+      inputBinding: {position: 5}
+      type: File
+    dvc_servername:
+      doc: 'The servername of the dvc directory.'
+      inputBinding: {position: 6}
+      type: string
+    dvc_path_to_working_repository:
+      doc: 'The directory that is used for the dvc script.'
+      inputBinding: {position: 7}
+      type: string
+    dvc_remote_directory_sshfs:
+      doc: 'A SSHFS connection to stream the output of DVC REPRO -P.'
+      inputBinding: {prefix: --dvc_remote_directory_sshfs}
+      type: Directory?
+    dvc_file_to_execute:
+      doc: 'This is optional parameter. If this parameter is given it will run "dvc repro DVC_FILE_TO_EXECUTE". Is this parameter is not set it will run "dvc repro -P"'
+      inputBinding: {prefix: --dvc_file_to_execute}
+      type: string?
+    sshfs_input_dest_rel_paths:
+      doc: 'This is optional parameter. Here you define all relative paths to the folder that has a SSHFS connection at your project. sshfs_input_dest_rel_paths and sshfs_input_server_settings must be have the same number of elements.'
+      inputBinding: {prefix: --data_dir}
+      type: string[]?
+    sshfs_input_server_settings:
+      doc: 'This is optional parameter. Here you define all sshfs connections to the folder that has a SSHFS connection at your project. sshfs_input_dest_rel_paths and sshfs_input_server_settings must be have the same number of elements.'
+      inputBinding: {prefix: --data_dir}
+      type: Directory[]?
+    live_output_files:
+      doc: 'Comma separated string list of files that should be included to the live output for example: tensorboard,output.json This could track a tensorboard folder and a output.json file.'
+      inputBinding: {prefix: --live_output_files}
+      type: string?
+    live_output_update_frequence:
+      doc: 'The update frequence of the live output in seconds.'
+      inputBinding: {prefix: --live_output_update_frequence}
+      type: int?
+  outputs: {}
+  stdout: stdout.txt
+  stderr: stderr.txt
+container:
+  engine: docker
+  settings:
+    gpus:
+      count: 1
+      vendor: "nvidia"
+    image:
+      url: 'docker.io/deepprojects/dvc-cc-large:10.1'
+    ram: 20000
+execution:
+  engine: ccagency
+  settings:
+    access:
+      auth: {password: '{{agency_password}}', username: '{{agency_username}}'}
+      url: https://agency.f4.htw-berlin.de/dt
+    batchConcurrencyLimit: 12
+redVersion: '9'
+
