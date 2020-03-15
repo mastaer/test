@@ -8,7 +8,7 @@ batches:
       git_path_to_working_repository: "github.com"
       git_working_repository_owner: "mastaer"
       git_working_repository_name: "test.git"
-      git_name_of_branch: "cc_0025_test_B58"
+      git_name_of_branch: "cc_0025_test_B87"
       dvc_authentication_json:
         class: File
         connector:
