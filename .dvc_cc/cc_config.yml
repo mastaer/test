@@ -36,10 +36,6 @@ cli:
       doc: 'The directory that is used for the dvc script.'
       inputBinding: {position: 7}
       type: string
-    dvc_data_dir:
-      doc: 'This is optional parameter. Here you can specify a sshfs folder for the "data" folder.'
-      inputBinding: {prefix: --data_dir}
-      type: Directory?
     dvc_remote_directory_sshfs:
       doc: 'A SSHFS connection to stream the output of DVC REPRO -P.'
       inputBinding: {prefix: --dvc_remote_directory_sshfs}
@@ -48,6 +44,14 @@ cli:
       doc: 'This is optional parameter. If this parameter is given it will run "dvc repro DVC_FILE_TO_EXECUTE". Is this parameter is not set it will run "dvc repro -P"'
       inputBinding: {prefix: --dvc_file_to_execute}
       type: string?
+    sshfs_input_dest_rel_paths:
+      doc: 'This is optional parameter. Here you define all relative paths to the folder that has a SSHFS connection at your project. sshfs_input_dest_rel_paths and sshfs_input_server_settings must be have the same number of elements.'
+      inputBinding: {prefix: --data_dir}
+      type: string[]?
+    sshfs_input_server_settings:
+      doc: 'This is optional parameter. Here you define all sshfs connections to the folder that has a SSHFS connection at your project. sshfs_input_dest_rel_paths and sshfs_input_server_settings must be have the same number of elements.'
+      inputBinding: {prefix: --data_dir}
+      type: Directory[]?
     live_output_files:
       doc: 'Comma separated string list of files that should be included to the live output for example: tensorboard,output.json This could track a tensorboard folder and a output.json file.'
       inputBinding: {prefix: --live_output_files}
@@ -58,7 +62,7 @@ cli:
       type: int?
   outputs: {}
   stdout: stdout.txt
-  stderr: stdout.txt
+  stderr: stderr.txt
 container:
   engine: docker
   settings:
