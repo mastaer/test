@@ -8,6 +8,9 @@ wdir: ..
 deps:
 - path: source/train.py
 - path: data
+- path: data2
+- path: data3
+- path: data4
 outs:
 - path: tensorboard
   cache: true
