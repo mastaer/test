@@ -1,4 +1,4 @@
-cmd: python source/train.py --learning-rate {{lr:float:0.0001}} --batch-size {{b:int:64}} --num-of-epochs
+cmd: python source/train.py --learning-rate {{lr:float:0.0001}} --batch-size {{b:int:None}} --num-of-epochs
   {{numofepochs:int:3}} --activation-function {{activationfunction:[relu,tanh]:relu}} --kernel-width
   {{kernelwidth:int:3}} --average-kernels {{averagekernels:int:32}} --num-of-conv-layers
   {{numofconvlayers:int:5}} --kernel-increasing-factor {{kernelincreasingfactor:float:1.2}}
@@ -28,6 +28,7 @@ outs:
   cache: true
   metric: true
   persist: false
+
 
 
 
