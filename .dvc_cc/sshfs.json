@@ -3,5 +3,20 @@
     "remote_path": "/mnt/md0/annusch/data_storage",
     "server": "dt1.f4.htw-berlin.de",
     "username": "annusch"
+  },
+  "data2": {
+    "remote_path": "/mnt/md0/annusch/data_storage",
+    "server": "dt1.f4.htw-berlin.de",
+    "username": "annusch"
+  },
+  "data3": {
+    "remote_path": "/mnt/md0/annusch/data_storage",
+    "server": "dt1.f4.htw-berlin.de",
+    "username": "annusch"
+  },
+  "data4": {
+    "remote_path": "/mnt/md0/annusch/data_storage",
+    "server": "dt1.f4.htw-berlin.de",
+    "username": "annusch"
   }
 }
