@@ -129,11 +129,11 @@ cli:
       type: string?
     sshfs_input_dest_rel_paths:
       doc: 'This is optional parameter. Here you define all relative paths to the folder that has a SSHFS connection at your project. sshfs_input_dest_rel_paths and sshfs_input_server_settings must be have the same number of elements.'
-      inputBinding: {prefix: --data_dir}
+      inputBinding: {prefix: --sshfs_input_dest_rel_paths}
       type: string[]?
     sshfs_input_server_settings:
       doc: 'This is optional parameter. Here you define all sshfs connections to the folder that has a SSHFS connection at your project. sshfs_input_dest_rel_paths and sshfs_input_server_settings must be have the same number of elements.'
-      inputBinding: {prefix: --data_dir}
+      inputBinding: {prefix: --sshfs_input_server_settings}
       type: Directory[]?
     live_output_files:
       doc: 'Comma separated string list of files that should be included to the live output for example: tensorboard,output.json This could track a tensorboard folder and a output.json file.'
