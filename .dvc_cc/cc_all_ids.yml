@@ -123,3 +123,7 @@ cc_0038_test:
 - 5e6f1249f7fafc694c4fae97
 cc_0046_test:
 - 5e6f17e471cd2565e0a3e3f1
+cc_0050_test_NUMOFSAMPLES10:
+- 5e6f1ccc70952b2b98b20f42
+cc_0050_test_NUMOFSAMPLES100:
+- 5e6f1cd8f7fafc694c4fae9e
