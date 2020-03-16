@@ -1,0 +1,19 @@
+WARNING: DVC-file 'dvc/papermill.dvc' changed.
+WARNING: Stage 'dvc/papermill.dvc' changed.
+Running command:
+	papermill test_papermill.ipynb test_papermill_output.ipynb -k python -p num_of_samples 10 -k python -p multiplier_x 100 -k python -p multiplier_y 1
+Input Notebook:  test_papermill.ipynb
+Output Notebook: test_papermill_output.ipynb
+Generating grammar tables from /home/cc/.local/lib/python3.6/site-packages/blib2to3/Grammar.txt
+Writing grammar tables to /home/cc/.cache/black/19.10b0/Grammar3.6.9.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/home/cc/.cache/black/19.10b0/tmp2tjjjb2q'
+Generating grammar tables from /home/cc/.local/lib/python3.6/site-packages/blib2to3/PatternGrammar.txt
+Writing grammar tables to /home/cc/.cache/black/19.10b0/PatternGrammar3.6.9.final.0.pickle
+Writing failed: [Errno 2] No such file or directory: '/home/cc/.cache/black/19.10b0/tmpzxzl8dge'
+Executing:   0%|          | 0/8 [00:00<?, ?cell/s]Executing notebook with kernel: python
+Executing:  12%|█▎        | 1/8 [00:01<00:08,  1.15s/cell]Executing:  50%|█████     | 4/8 [00:01<00:03,  1.22cell/s]Executing: 100%|██████████| 8/8 [00:01<00:00,  5.72cell/s]
+
+To track the changes with git, run:
+
+	git add dvc/papermill.dvc .gitignore
+[IPKernelApp] WARNING | Parent appears to have exited, shutting down.
