@@ -1,0 +1,11 @@
+cmd: papermill test_papermill.ipynb test_papermill_output.ipynb {{num_of_samples:int:None}}
+  {{multiplier_x:int:None}} {{multiplier_y:float:None}} {{print_text:float:None}}
+wdir: ..
+deps:
+- path: test_papermill.ipynb
+outs:
+- path: test_papermill.ipynb_output
+  cache: true
+  metric: false
+  persist: false
+
