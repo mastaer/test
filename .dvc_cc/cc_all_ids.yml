@@ -171,3 +171,7 @@ cc_0068_test:
 - 5e6f48bef7fafc694c4fb040
 cc_0069_test:
 - 5e6f4a4070952b2b98b20fec
+cc_0071_test_NUMOFSAMPLES100:
+- 5e6fdb90f7fafc694c4fb0ae
+cc_0071_test_NUMOFSAMPLES200:
+- 5e6fdb9c70952b2b98b21010
