@@ -1,9 +1,9 @@
 cmd: papermill test_papermill.ipynb test_papermill_output.ipynb -k python -p num_of_samples
-  10 -k python -p multiplier_x 0.1
-  -k python -p multiplier_y 1
+  10 -k python -p multiplier_x 0.1 -k python -p multiplier_y 1
 wdir: ..
 deps:
 - path: test_papermill.ipynb
+  md5: b6e6aadcc37623f13013a09830aa7bb6
 outs:
 - path: test_papermill_output.ipynb
   cache: true
@@ -11,3 +11,5 @@ outs:
   persist: false
 
 
+  md5: 903a01ed900f7fee032ee689a58a94f3
+md5: eb7d1ea9703ad1b78d7a913f15537a91
