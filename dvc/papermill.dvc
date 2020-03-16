@@ -1,0 +1,12 @@
+cmd: papermill test_papermill.ipynb test_papermill_output.ipynb-p num_of_samples 100-p
+  multiplier_x 1.2-p multiplier_y 123.2
+wdir: ..
+deps:
+- path: test_papermill.ipynb
+outs:
+- path: test_papermill_output.ipynb
+  cache: true
+  metric: false
+  persist: false
+
+
