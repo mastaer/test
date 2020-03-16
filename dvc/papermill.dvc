@@ -1,0 +1,12 @@
+cmd: papermill test_papermill.ipynb test_papermill_output.ipynb 10
+  2.23 3.1
+wdir: ..
+deps:
+- path: test_papermill.ipynb
+outs:
+- path: test_papermill_output.ipynb
+  cache: true
+  metric: false
+  persist: false
+
+
