@@ -1,0 +1,9 @@
+cmd: papermill Untitled.ipynb Untitled_output.ipynb
+wdir: ..
+deps:
+- path: Untitled.ipynb
+outs:
+- path: Untitled.ipynb_output
+  cache: true
+  metric: false
+  persist: false
